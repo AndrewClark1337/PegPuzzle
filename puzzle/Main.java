@@ -5,12 +5,6 @@
  */
 package puzzle;
 
-import puzzle.Board;
-import puzzle.Board;
-import puzzle.Display;
-import puzzle.Display;
-import puzzle.Solver;
-import puzzle.Solver;
 
 /**
  *
@@ -27,22 +21,27 @@ public class Main {
         for(int k = 0;k<5;k++)
         {
             System.out.printf("======= %d =======\n",k);
+            
             int start = board.createBoard(k);
             System.out.println();
             int[][] path = s.solve(start);
+            int count = 1;
             for(int i = 0; i < path.length;i++)
             {
                 if(path[i][13]!= 0)
                 {
-                    
+                    System.out.printf("Solution #%d:\n",count);
+                    System.out.println("_____________________________________");
+                    System.out.println();
                     for(int j=0;j<14;j++)
                     {
                         d.print(path[i][j]);
                     }
-                    System.out.println("_____________________________________");
+                    
+                    count++;
                 }
             }
-            System.out.println();
+   
         }  
     }
 }
