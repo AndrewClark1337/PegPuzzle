@@ -15,7 +15,7 @@ public class Display {
         System.out.println("Display Created!");
     }
     final public static int SIZE = 5;
-    public static void print(int mask) {
+    public void print(int mask) {
 
 
         for (int i=0; i<SIZE; i++) {
@@ -26,7 +26,7 @@ public class Display {
 
             for (int j=0; j<=i; j++) {
                 if (on(mask, SIZE*i+j)) System.out.print("X ");
-                else					System.out.print("_ ");
+                else					System.out.print(". ");
             }
             System.out.println();
         }
